@@ -7,10 +7,6 @@ body, html {
   margin: 0px;
 }
 
-/*
-$logo-height : 100px;
-$logo-positionTop : 25px;
-$singInWraper-offsetTop : 25px;*/
 .login-page {
   font-family: sans-serif;
 }
@@ -78,6 +74,7 @@ $singInWraper-offsetTop : 25px;*/
       grid-template-columns: 100%;
   text-align: center;
   padding: 0px 10%;
+  max-height: 480px;
 }
 
 .login-page.fullpage-split-card .login-container .main-box .card.card-left .signin-wrapper h2 {

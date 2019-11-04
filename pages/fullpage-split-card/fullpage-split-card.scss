@@ -9,11 +9,6 @@ $primaryColor: #1d2120;
 $primaryColorLight: #a4a4a4;
 $primaryColorLighter: #f1f1f1; 
 $secColor: #3aaba5;
-/*
-$logo-height : 100px;
-$logo-positionTop : 25px;
-$singInWraper-offsetTop : 25px;*/
-
 
 .login-page{
     font-family: sans-serif;
@@ -63,6 +58,7 @@ $singInWraper-offsetTop : 25px;*/
                             grid-template-columns: 100%;
                             text-align: center;
                             padding: 0px 10%;
+                            max-height: 480px;
                             h2 {
                                 margin: 0px;
                                 font-size: 2.5rem;
