@@ -1,0 +1,13 @@
+@import '../../scss/style.scss';
+
+body, html {
+    padding: 0px;
+    margin: 0px;
+}
+
+.parent {
+    background : orange;
+    h3{
+        margin:0px;
+    }
+}

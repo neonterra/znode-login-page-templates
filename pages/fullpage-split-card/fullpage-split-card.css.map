@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACAA,AAAA,IAAI,CAAA;EACA,UAAU,EAAG,OAAO;CACvB;;ADAD,AAAA,IAAI,EAAE,IAAI,CAAC;EACP,OAAO,EAAE,GAAG;EACZ,MAAM,EAAE,GAAG;CACd;;AAED,AAAA,OAAO,CAAC;EACJ,UAAU,EAAG,MAAM;CAItB;;AALD,AAEI,OAFG,CAEH,EAAE,CAAA;EACE,MAAM,EAAC,GAAG;CACb",
+    "sources": [
+        "fullpage-split-card.scss",
+        "../../scss/style.scss"
+    ],
+    "names": [],
+    "file": "fullpage-split-card.css"
+}

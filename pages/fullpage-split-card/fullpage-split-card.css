@@ -1,0 +1,17 @@
+body {
+  background: #f7f7f7;
+}
+
+body, html {
+  padding: 0px;
+  margin: 0px;
+}
+
+.parent {
+  background: orange;
+}
+
+.parent h3 {
+  margin: 0px;
+}
+/*# sourceMappingURL=fullpage-split-card.css.map */
