@@ -3,23 +3,125 @@
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
-    <title>Login with scss</title>
-	<link rel="stylesheet" href="./fullpage-split-card.css">
+    <title>Login Page - fullpage-split-card</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./fullpage-split-card.css">
+    
+    <script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function (){
+            console.log('running app');
+        });
+
+        $(document).on('click','*[znode-toggle]',function (){
+            var offsetMove = window.outerWidth.toString();
+            var t = $(this).attr('znode-toggle');
+            if(t == 'signin-box'){
+                $('.signup-box').animate({'left' : offsetMove + 'px'});
+                $('.signin-box').animate({'margin-left' : '0px'});
+            }else  if(t == 'singup-box'){
+                $('.signup-box').animate({'left' : '0px'});
+                $('.signin-box').animate({'margin-left' : '-'+offsetMove+'px'});
+            }
+           
+        });
+    </script>
 </head>
 <body>
 
 </body>
 </html>
-<div class="parent">
-    <div class="top-bar">
-        <h3>Login Page with side bars</h3>
+<div class="login-page fullpage-split-card">
+    <div class="logo">
+        <img src="./images/logo.png">
     </div>
-    <div class="listing">
-        <ul>
-            <li>Listing page 1</li>
-            <li>Listing page 2</li>
-            <li>Listing page 3</li>
-            <li>Listing page 4</li>
-        </ul>
+    <div class="login-container signin-box">
+        <div class="main-box ">
+            <div class="card card-left">
+                
+                <div class="signin-wrapper">
+                    <h2>Sign to Diprella</h2>
+                    <div class="social-btn">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                    </div>
+                    <p class="sub-heading">or user your emaill account:</p>
+                    <form>
+                        <div class="input-box input-icon">
+                            <i class="fa fa-envelope"></i>
+                            <input tpye="text" placeholder="email" />
+                        </div>
+                        <div class="input-box input-icon">
+                            <i class="fa fa-lock"></i>
+                            <input tpye="password" placeholder="password" />
+                        </div>
+                    
+                        <div class="fw text-center forget-password">
+                            <a href="#" class="link">Forgot your password</a>
+                        </div>
+
+                        <div class="input-box button-box fw text-center signin-btn">
+                            <button class="btn btn-default btn-round">sign in</button>
+                        </div>
+                     </form>
+                </div>
+            </div>
+            <div class="card card-right">
+                <div class="flex-wrapper">
+                    <h3>Hello, Firend!</h3>
+                    <p>no chocolate dispensing on level 2 machine. Whirring grinding sounds. Same issue as level</p>
+                    <a href="#" znode-toggle="singup-box" class="btn btn-round btn-outline">sign up</a>
+                </div>
+            </div>
+        </div> 
+
+        
+    </div>
+
+    <div class="login-container signup-box">
+        <div class="main-box" >
+            <div class="card card-right">
+                <div class="flex-wrapper">
+                    <h3>Hello, Firend!</h3>
+                    <p>no chocolate dispensing on level 2 machine. Whirring grinding sounds. Same issue as level</p>
+                    <a href="#" znode-toggle="signin-box" class="btn btn-round btn-outline">sign in</a>
+                </div>
+            </div>
+            <div class="card card-left " >
+              
+                <div class="signin-wrapper">
+                    <h2>Register with Diprella</h2>
+                    <div class="social-btn">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                    </div>
+                    <p class="sub-heading">or user your emaill account:</p>
+                    <form>
+                        <div class="input-box input-icon">
+                            <i class="fa fa-envelope"></i>
+                            <input tpye="text" placeholder="email" />
+                        </div>
+                        <div class="input-box input-icon">
+                            <i class="fa fa-lock"></i>
+                            <input tpye="password" placeholder="password" />
+                        </div>
+                    
+                        <div class="input-box button-box fw text-center signin-btn">
+                            <button class="btn btn-default btn-round">register now</button>
+                        </div>
+                        </form>
+                </div>
+            </div>
+            
+        </div>
     </div>
 </div>
+
+
+

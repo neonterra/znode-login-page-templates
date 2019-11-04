@@ -5,9 +5,248 @@ body, html {
     margin: 0px;
 }
 
-.parent {
-    background : orange;
-    h3{
-        margin:0px;
+$primaryColor: #1d2120;
+$primaryColorLight: #a4a4a4;
+$primaryColorLighter: #f1f1f1; 
+$secColor: #3aaba5;
+/*
+$logo-height : 100px;
+$logo-positionTop : 25px;
+$singInWraper-offsetTop : 25px;*/
+
+
+.login-page{
+    font-family: sans-serif;
+    &.fullpage-split-card {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        overflow: hidden;
+        .logo {
+            position: absolute;
+            left: 30px;
+            display: block;
+            max-width: 100px;
+            overflow: hidden;
+            top: 30px;
+            height: 100px;
+            z-index:99;
+            img {
+                width: 100%;
+                /* height: 100%; */
+            }
+        }
+        .login-container {
+            width: 100%;
+            height: 100%;
+            position:fixed;
+            top: 0;
+            bottom: 0;
+            .main-box {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                .card {
+                    width: 100%;
+                    &.card-left {
+                        min-width: 75%;
+                        
+                        .signin-wrapper {
+                            margin-top: calc(100px + 30px + 25px);
+                            height: calc(100vh - (30px + 100px + 25px));
+                            overflow-y: auto;
+                            /* height: 100vh; */
+                            display: grid;
+                            justify-content: center;
+                            grid-template-columns: 100%;
+                            text-align: center;
+                            padding: 0px 10%;
+                            h2 {
+                                margin: 0px;
+                                font-size: 2.5rem;
+                                color:$secColor;
+                            }
+                            .social-btn {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                a {
+                                    background: #fff;
+                                    color: $primaryColor;
+                                    border: 1px solid $primaryColorLight;
+                                    border-radius: 100%;
+                                    width: 50px;
+                                    height: 50px;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    text-decoration: none;
+                                    font-size: 1.5rem;
+                                    margin: 0 10px;
+                                    transition: all 0.2s;
+                                    &:hover {
+                                        background: $primaryColor;
+                                        color: #fff;
+                                        transition: all 0.3s;
+                                    }
+                                } 
+                            }
+                            .sub-heading {
+                                color: $primaryColorLight;
+                                letter-spacing: 0.05rem;
+                                font-weight: 600;
+                            }
+                            
+                            form {
+                                max-width: 400px;
+                                margin: 0 auto;
+                                width: 100%;
+                                .input-icon {
+                                    background: $primaryColorLighter;
+                                    padding: 12px 17px;
+                                    margin-bottom: 9px;
+                                    display: flex;
+                                    align-items: center;
+                                    i {
+                                        font-size: 1.2rem;
+                                        color: $secColor ;
+                                        margin-right: 10px;
+                                    }
+                                    input {
+                                        background: transparent;
+                                        border: none;
+                                        text-transform: capitalize;
+                                        color: $primaryColorLight;
+                                        letter-spacing: 0.02rem;
+                                        width: 100%;
+                                        font-size: 1rem;
+                                        padding: 4px 0;
+                                        &:focus {
+                                            outline: none;
+                                        }
+                                    }
+                                }
+                                .forget-password {
+                                    margin-top: 30px;
+                                    a {
+                                        font-weight: 600;
+                                        color: $primaryColor;
+                                        text-transform: lowercase;
+                                        text-decoration: none;
+                                        border-bottom: 1px solid $primaryColorLight;
+                                        padding-bottom: 4px;
+                                    }
+                                }
+                                .button-box {
+                                    margin-top: 20px;
+                                    button {
+                                        min-width: 65%;
+                                        text-align: center;
+                                        margin-top: 20px;
+                                        text-transform: uppercase;
+                                        text-decoration: none;
+                                        -webkit-transition: all 0.2s;
+                                        font-size: 0.8rem;
+                                        letter-spacing: 1px;
+                                        font-weight: 600;
+                                        padding: 15px 20px;
+                                        border-color: $secColor;
+                                        background: $secColor;
+                                        border: 1px solid;
+                                        letter-spacing: 0.1rem;
+                                        transition: all 0.2s;
+                                        cursor: pointer;
+                                        &:hover {
+                                            background: transparent;
+                                            color: $secColor;
+                                            transition: all 0.3s;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.card-right {
+                        background: $secColor;
+                        color: #fff;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        .flex-wrapper {
+                            width: 100%;
+                            display: grid;
+                            justify-content: center;
+                            grid-template-columns: 100%;
+                            padding: 0 25%;
+                            h3 , p {
+                                font-size: 2rem;
+                                text-align: center;
+                                width: 100%;
+                                margin-bottom: 0px;
+                            }
+                            p {
+                                font-size: 1rem;
+                            }
+                            a {
+                                text-align: center;
+                                margin-top: 45px;
+                                text-transform: uppercase;
+                                text-decoration: none;
+                                transition: all 0.2s;
+                                font-size: 0.8rem;
+                                letter-spacing: 1px;
+                                font-weight: 600;
+                                padding: 15px 20px;
+                                &:hover {
+                                    text-decoration: none;
+                                    background: #fff;
+                                    color: $secColor;
+                                    border-color: #fff;
+                                    transition: all 0.3s;
+                                }
+                            }
+                        }
+                        
+                        
+                    }
+                    
+                }
+
+                
+                
+            }
+            &.signin-box{
+                left:0;
+            }
+            &.signup-box{
+                left:1920px;
+            } 
+            
+        }
     }
+}
+
+
+
+.btn {
+    display: inline-block;
+    background: $secColor;
+    color: #fff;
+    padding: 10px 20px;
+    &.btn-round {
+        border-radius: 50px;
+    }
+    &.btn-outline {
+        background: transparent;
+        border: 1px solid;
+    }
+}
+.fw {
+    width: 100%;
+}
+
+.text-center {
+    text-align: center;
 }

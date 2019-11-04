@@ -7,11 +7,303 @@ body, html {
   margin: 0px;
 }
 
-.parent {
-  background: orange;
+/*
+$logo-height : 100px;
+$logo-positionTop : 25px;
+$singInWraper-offsetTop : 25px;*/
+.login-page {
+  font-family: sans-serif;
 }
 
-.parent h3 {
+.login-page.fullpage-split-card {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  overflow: hidden;
+}
+
+.login-page.fullpage-split-card .logo {
+  position: absolute;
+  left: 30px;
+  display: block;
+  max-width: 100px;
+  overflow: hidden;
+  top: 30px;
+  height: 100px;
+  z-index: 99;
+}
+
+.login-page.fullpage-split-card .logo img {
+  width: 100%;
+  /* height: 100%; */
+}
+
+.login-page.fullpage-split-card .login-container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+}
+
+.login-page.fullpage-split-card .login-container .main-box {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.login-page.fullpage-split-card .login-container .main-box .card {
+  width: 100%;
+}
+
+.login-page.fullpage-split-card .login-container .main-box .card.card-left {
+  min-width: 75%;
+}
+
+.login-page.fullpage-split-card .login-container .main-box .card.card-left .signin-wrapper {
+  margin-top: calc(100px + 30px + 25px);
+  height: calc(100vh - (30px + 100px + 25px));
+  overflow-y: auto;
+  /* height: 100vh; */
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  text-align: center;
+  padding: 0px 10%;
+}
+
+.login-page.fullpage-split-card .login-container .main-box .card.card-left .signin-wrapper h2 {
   margin: 0px;
+  font-size: 2.5rem;
+  color: #3aaba5;
+}
+
+.login-page.fullpage-split-card .login-container .main-box .card.card-left .signin-wrapper .social-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login-page.fullpage-split-card .login-container .main-box .card.card-left .signin-wrapper .social-btn a {
+  background: #fff;
+  color: #1d2120;
+  border: 1px solid #a4a4a4;
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  font-size: 1.5rem;
+  margin: 0 10px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.login-page.fullpage-split-card .login-container .main-box .card.card-left .signin-wrapper .social-btn a:hover {
+  background: #1d2120;
+  color: #fff;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.login-page.fullpage-split-card .login-container .main-box .card.card-left .signin-wrapper .sub-heading {
+  color: #a4a4a4;
+  letter-spacing: 0.05rem;
+  font-weight: 600;
+}
+
+.login-page.fullpage-split-card .login-container .main-box .card.card-left .signin-wrapper form {
+  max-width: 400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.login-page.fullpage-split-card .login-container .main-box .card.card-left .signin-wrapper form .input-icon {
+  background: #f1f1f1;
+  padding: 12px 17px;
+  margin-bottom: 9px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login-page.fullpage-split-card .login-container .main-box .card.card-left .signin-wrapper form .input-icon i {
+  font-size: 1.2rem;
+  color: #3aaba5;
+  margin-right: 10px;
+}
+
+.login-page.fullpage-split-card .login-container .main-box .card.card-left .signin-wrapper form .input-icon input {
+  background: transparent;
+  border: none;
+  text-transform: capitalize;
+  color: #a4a4a4;
+  letter-spacing: 0.02rem;
+  width: 100%;
+  font-size: 1rem;
+  padding: 4px 0;
+}
+
+.login-page.fullpage-split-card .login-container .main-box .card.card-left .signin-wrapper form .input-icon input:focus {
+  outline: none;
+}
+
+.login-page.fullpage-split-card .login-container .main-box .card.card-left .signin-wrapper form .forget-password {
+  margin-top: 30px;
+}
+
+.login-page.fullpage-split-card .login-container .main-box .card.card-left .signin-wrapper form .forget-password a {
+  font-weight: 600;
+  color: #1d2120;
+  text-transform: lowercase;
+  text-decoration: none;
+  border-bottom: 1px solid #a4a4a4;
+  padding-bottom: 4px;
+}
+
+.login-page.fullpage-split-card .login-container .main-box .card.card-left .signin-wrapper form .button-box {
+  margin-top: 20px;
+}
+
+.login-page.fullpage-split-card .login-container .main-box .card.card-left .signin-wrapper form .button-box button {
+  min-width: 65%;
+  text-align: center;
+  margin-top: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  -webkit-transition: all 0.2s;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+  padding: 15px 20px;
+  border-color: #3aaba5;
+  background: #3aaba5;
+  border: 1px solid;
+  letter-spacing: 0.1rem;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.login-page.fullpage-split-card .login-container .main-box .card.card-left .signin-wrapper form .button-box button:hover {
+  background: transparent;
+  color: #3aaba5;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.login-page.fullpage-split-card .login-container .main-box .card.card-right {
+  background: #3aaba5;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.login-page.fullpage-split-card .login-container .main-box .card.card-right .flex-wrapper {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  padding: 0 25%;
+}
+
+.login-page.fullpage-split-card .login-container .main-box .card.card-right .flex-wrapper h3, .login-page.fullpage-split-card .login-container .main-box .card.card-right .flex-wrapper p {
+  font-size: 2rem;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 0px;
+}
+
+.login-page.fullpage-split-card .login-container .main-box .card.card-right .flex-wrapper p {
+  font-size: 1rem;
+}
+
+.login-page.fullpage-split-card .login-container .main-box .card.card-right .flex-wrapper a {
+  text-align: center;
+  margin-top: 45px;
+  text-transform: uppercase;
+  text-decoration: none;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+  padding: 15px 20px;
+}
+
+.login-page.fullpage-split-card .login-container .main-box .card.card-right .flex-wrapper a:hover {
+  text-decoration: none;
+  background: #fff;
+  color: #3aaba5;
+  border-color: #fff;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.login-page.fullpage-split-card .login-container.signin-box {
+  left: 0;
+}
+
+.login-page.fullpage-split-card .login-container.signup-box {
+  left: 1920px;
+}
+
+.btn {
+  display: inline-block;
+  background: #3aaba5;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+.btn.btn-round {
+  border-radius: 50px;
+}
+
+.btn.btn-outline {
+  background: transparent;
+  border: 1px solid;
+}
+
+.fw {
+  width: 100%;
+}
+
+.text-center {
+  text-align: center;
 }
 /*# sourceMappingURL=fullpage-split-card.css.map */
